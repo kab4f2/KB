@@ -73,6 +73,7 @@ int main()
 	{
 		cout<<"Well, what are you waiting for?"<<endl;
 		cout<<"Ready to begin? (yes/no)"<<endl;
+		cin>>choice;
 	}
 	while(done == false)
 	{
@@ -108,29 +109,105 @@ int main()
 			cout<<"Invalid choice, choose between 1 and 3:";
 			cin>>playerChoice;
 		}
-		int enemyChoice = rand()%3;
+		int enemyChoice = 1 + rand()% 3;
 		cout<<"Enemy choose option "<<enemyChoice<<endl;
 		cout<<"----------------------------------------"<<endl;
+
+
+		//Adjust player and enemy stats based on the type of attack theyre doing
 		int adjustedPlayerAtk = playerAtk;
 		int adjustedPlayerAgi = playerAgi;
 		int adjustedEnemyAtk = enemyAtk;
 		int adjustedEnemyAgi = enemyAgi;
+
+
 		if (playerChoice == 1)
 		{
-			 //adjustedPlayer += 2;
-			// adjustedPlayer -= 1;
+			 adjustedPlayerAgi += 2;
+			 adjustedPlayerAtk -= 1;
 		}
-		if (playerChoice == 3)
+		else if (playerChoice == 3)
 		{
-			//int adjustedPlayer + 2;
-			//int adjustedPlayer - 1;
+			 adjustedPlayerAgi -=1;
+			 adjustedPlayerAtk +=2;
+		}
+		 if (enemyChoice == 1)
+		{
+			 adjustedEnemyAgi += 2;
+			 adjustedPlayerAtk -= 1;
 		}
 		else if (enemyChoice == 1)
 		{
-			//int adjustedPlayer + 2;
-			//int adjustedPlayer - 1;
+			 adjustedEnemyAgi -= 1;
+			 adjustedPlayerAtk += 2;
+		}
+		//Begin Battles
+
+
+		cout<<"PLAYER attacks ENEMY!"<<endl;
+		Sleep(1000);
+		int randDiff  = 1 + rand()% 3;
+		Sleep(1000);
+		if (randDiff >= 1)
+		{
+			//Calulate Damage
+			int damage = adjustedPlayerAtk - enemyDef/2;
+			cout<<"PLAYER hits ENEMY for"<<damage<<"damage"<<endl;
+			enemyHP -= damage;
+		}
+		else 
+		{
+			cout<<"PLAYER misses!"<<endl;
+		}
+		Sleep(1000);
+		cout<<"ENEMY Attacks PLAYER"<<endl;
+		Sleep(1000);
+		
+		randDiff = rand()%3+5;////fix this
+		Sleep(1000);
+		if (randDiff >= 1)
+		{
+			//Calulate Damage
+			int damage = adjustedEnemyAtk - playerDef/2;
+			cout<<" ENEMY hits PLAYER for"<<damage<<"damage"<<endl;
+			playerHP -= damage;
+		}
+		else 
+		{
+			cout<<"ENEMY misses!"<<endl;
+		}
+		Sleep(1000);
+		///Check to see if either player is knocked out
+		if (playerHP <= 0)
+		{
+			cout<<"PLAYER has FALLEN"<<endl;
+			done = true;
+		}
+		else if (enemyHP <= 0)
+		{
+			cout<<"ENEMY has FALLEN"<<endl;
+			done = true;
 		}
 	}
+//GAME Main Loop
+
+// At ths point , either player or enemy has fallen
+cout<<endl;
+cout<<"  ################################################  "<<endl;
+cout<<"  #######                                   ######  "<<endl;
+cout<<"  ###########        GAME OVER         ###########  "<<endl;
+cout<<"  ################################################  "<<endl;
+cout<<"  ##                                            ##  "<<endl;
+cout<<endl;
+if (playerHP <= 0 )
+{
+	cout<<"TOO BAD, YOU LOST!"<<endl;
+}
+else if (enemyHP <= 0)
+{
+	cout<<"CONGRATULATIONS, YU WON!"<<endl;
+}
+	
 
 
 
