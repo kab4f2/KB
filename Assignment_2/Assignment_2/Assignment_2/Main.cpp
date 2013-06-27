@@ -12,6 +12,10 @@
 
 using namespace std;
 
+void DisplayStats(Character player,Character enemy);
+
+Character AdjustStats(Character character,int attackChoice);
+
 int main()
 
 
@@ -32,28 +36,50 @@ int main()
 	equipment[0].Setup("Knight's Pack",8,4,3);
 	equipment[1].Setup("Tank's Pack",4,8,3);
 	equipment[2].Setup("Rogue's Pack",4,3,8);
-	int call;
-	cout<<   "        MENU      "   <<endl;
-	cout <<  "0 for Knight's Pack"  <<endl;
-	cout <<  "1 for Tanks's Pack"   <<endl;
-	cout <<  "2 for Rogue's Pack"   <<endl;
-	cin >>  call >> endl;
-
-
-
-
 
 	Character enemy;
 	enemy.name = "Enemy";
 	enemy.hp = 20;
-	enemy.atk = rand()%2+5;
+	
 	
 
 
 	Character player;
 	player.name = "Player";
 	player.hp = 20;
-	player.atk = rand()%3+5;
+	
+
+
+	int call;
+
+	cout<<   "        MENU      "   <<endl;
+	cout <<  "0 for Knight's Pack"  <<endl;
+	cout <<  "1 for Tanks's Pack"   <<endl;
+	cout <<  "2 for Rogue's Pack"   <<endl;
+
+	
+	cout<<"Enter a Number of the  equipment to continue"<<endl;
+	cin>>call;
+	
+		equipment[0];
+		player.atk = equipment[call].atk;
+		player.def = equipment[call].def;
+		player.agi = equipment[call].agi;
+
+		call = rand()% 3;
+		enemy.atk = equipment[call].atk;
+		enemy.def = equipment[call].def;
+		enemy.agi = equipment[call].agi;
+
+
+		DisplayStats( player ,enemy);
+		
+	
+	
+	
+		
+		
+	
 	
 
 
@@ -70,8 +96,8 @@ int main()
 	cout<<"PLAYERS STATS:"<<endl;
 	cout<<"HP: "<<player.hp <<endl;
 	cout<<"Atk: "<<player.atk<<endl;
-	cout<<"Def: "<<playerDef<<endl;
-	cout<<"Agi: "<<player.Agi<<endl;
+	cout<<"Def: "<<player.def<<endl;
+	cout<<"Agi: "<<player.agi<<endl;
 	
 
 
@@ -80,17 +106,8 @@ int main()
 	cout<<"ENEMYS STATS:"<<endl;
 	cout<<"HP: "<<enemy.hp <<endl;
 	cout<<"Atk: "<<enemy.atk<<endl;
-	cout<<"Def: "<<enemyDef<<endl;
-	cout<<"Agi: "<<enemyAgi<<endl;
-
-
-	int choc;
-	cout<<"            Menu             "<<endl;
-	cout<<                               <<endl;
-	cout<<"  1)     Knight's Pack       "<<endl; 
-	cout<<"  2)     Tank's Pack         "<<endl; 
-	cout<<"  3)     Roguet's Pack       "<<endl; 
-	cin>>choc;
+	cout<<"Def: "<<enemy.def<<endl;
+	cout<<"Agi: "<<enemy.agi<<endl;
 	
 
 
@@ -109,21 +126,23 @@ int main()
 	while(done == false)
 	{
 		CombatRounds ++ ;
+		
 		cout<<endl;
 		cout<<"#########################################"<<endl;
 		cout<<"-----------------------------------------"<<endl;
 		cout<<"ROUND" <<CombatRounds<<endl;
-		cout<<"PLAYER:"<<endl;
-		cout<<"HP"<<playerHP<<endl;
-		cout<<"ATK"<<playerAtk<<endl;
-		cout<<"DEF"<<playerDef<<endl;
-		cout<<"AGI"<<playerAgi<<endl;
+		//cout<<"PLAYER:"<<endl;
+		//cout<<"HP"<<player.hp<<endl;
+		//cout<<"ATK"<<player.atk<<endl;
+		//cout<<"DEF"<<player.def<<endl;
+		//cout<<"AGI"<<player.agi<<endl;
 	
-		cout<<"ENEMY:"<<endl;
-		cout<<"HP"<<enemyHP<<endl;
-		cout<<"ATK"<<enemyAtk<<endl;
-		cout<<"DEF"<<enemyDef<<endl;
-		cout<<"AGI"<<enemyAgi<<endl;
+		//cout<<"ENEMY:"<<endl;
+		DisplayStats( player,enemy);
+		//cout<<"HP"<<enemy.hp<<endl;
+		//cout<<"ATK"<<enemy.atk<<endl;
+		//cout<<"DEF"<<enemy.def<<endl;
+		//cout<<"AGI"<<enemy.agi<<endl;
 		Sleep(1000);
 
 
@@ -145,33 +164,11 @@ int main()
 		cout<<"----------------------------------------"<<endl;
 
 
-		//Adjust player and enemy stats based on the type of attack theyre doing
-		int adjustedPlayerAtk = playerAtk;
-		int adjustedPlayerAgi = playerAgi;
-		int adjustedEnemyAtk = enemyAtk;
-		int adjustedEnemyAgi = enemyAgi;
+		
 
-
-		if (playerChoice == 1)
-		{
-			 adjustedPlayerAgi += 2;
-			 adjustedPlayerAtk -= 1;
-		}
-		else if (playerChoice == 3)
-		{
-			 adjustedPlayerAgi -=1;
-			 adjustedPlayerAtk +=2;
-		}
-		 if (enemyChoice == 1)
-		{
-			 adjustedEnemyAgi += 2;
-			 adjustedPlayerAtk -= 1;
-		}
-		else if (enemyChoice == 1)
-		{
-			 adjustedEnemyAgi -= 1;
-			 adjustedPlayerAtk += 2;
-		}
+		player = AdjustStats(player,playerChoice);
+		enemy = AdjustStats(enemy,enemyChoice);
+		
 		//Begin Battles
 
 
@@ -182,9 +179,9 @@ int main()
 		if (randDiff >= 1)
 		{
 			//Calulate Damage
-			int damage = adjustedPlayerAtk - enemyDef/2;
+			int damage = player.adjustedAtk - enemy.def/2;
 			cout<<"PLAYER hits ENEMY for"<<damage<<"damage"<<endl;
-			enemyHP -= damage;
+			enemy.hp -= damage;
 		}
 		else 
 		{
@@ -194,14 +191,14 @@ int main()
 		cout<<"ENEMY Attacks PLAYER"<<endl;
 		Sleep(1000);
 		
-		randDiff = rand()%3+5;////fix this
+		randDiff = rand()%3+5;
 		Sleep(1000);
 		if (randDiff >= 1)
 		{
 			//Calulate Damage
-			int damage = adjustedEnemyAtk - playerDef/2;
+			int damage = enemy.adjustedAtk - player.def/2;
 			cout<<" ENEMY hits PLAYER for"<<damage<<"damage"<<endl;
-			playerHP -= damage;
+			player.hp -= damage;
 		}
 		else 
 		{
@@ -209,12 +206,12 @@ int main()
 		}
 		Sleep(1000);
 		///Check to see if either player is knocked out
-		if (playerHP <= 0)
+		if (player.hp <= 0)
 		{
 			cout<<"PLAYER has FALLEN"<<endl;
 			done = true;
 		}
-		else if (enemyHP <= 0)
+		else if (enemy.hp <= 0)
 		{
 			cout<<"ENEMY has FALLEN"<<endl;
 			done = true;
@@ -230,11 +227,11 @@ cout<<"  ###########        GAME OVER         ###########  "<<endl;
 cout<<"  ################################################  "<<endl;
 cout<<"  ##                                            ##  "<<endl;
 cout<<endl;
-if (playerHP <= 0 )
+if (player.hp <= 0 )
 {
 	cout<<"TOO BAD, YOU LOST!"<<endl;
 }
-else if (enemyHP <= 0)
+else if (enemy.hp <= 0)
 {
 	cout<<"CONGRATULATIONS, YU WON!"<<endl;
 }
@@ -263,4 +260,36 @@ else if (enemyHP <= 0)
 	system("PAUSE");
 	return 0;
 }
+void DisplayStats(Character player,Character enemy)
+{
+	cout<<player.name<<endl;
+	cout<<player.atk<<endl;
+	cout<<player.agi<<endl;
+	cout<<player.def<<endl;
+
+
+	cout<<enemy.name<<endl;
+	cout<<enemy.atk<<endl;
+	cout<<enemy.agi<<endl;
+	cout<<enemy.def<<endl;
+
+};
+Character AdjustStats(Character player,int attackChoice)
+{
+	
+	if (attackChoice == 1)
+
+	{
+
+		player.adjustedAgi = player.agi + 2;
+		player.adjustedAtk = player.atk - 1;
+	}
+	else if (attackChoice == 3)
+	{
+		player.adjustedAtk = player.agi + 2;
+		player.adjustedAgi = player.atk - 1;
+	}
+	
+	return player;
+};
 
