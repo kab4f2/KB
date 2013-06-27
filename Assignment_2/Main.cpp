@@ -7,6 +7,8 @@
 #include<time.h>
 #include <string>
 #include<windows.h>
+#include"Character.h"
+#include"Equipment.h"
 
 using namespace std;
 
@@ -23,17 +25,28 @@ int main()
 
 	bool done = false;
 
-	int enemyHP = 20;
-	int enemyAtk = rand()%2+5;
-	int enemyDef = rand()%2+5;
-	int enemyAgi = rand()%2+5;
+
+
+	Equipment equipment [3};
+	equipment[0].Setup("Knight's Pack",8,4,3);
+	equipment[1].Setup("Tank's Pack",4,8,3);
+	equipment[2].Setup("Rogue's Pack",4,3,8);
 
 
 
-	int playerHP = 20;
-	int playerAtk = rand()%3+5;
-	int playerDef = rand()%3+5;
-	int playerAgi = rand()%3+5;
+
+	Character enemy;
+	enemy.name = "Enemy";
+	enemy.hp = 20;
+	enemy.atk = rand()%2+5;
+	
+
+
+	Character player;
+	player.name = "Player";
+	player.hp = 20;
+	player.atk = rand()%3+5;
+	
 
 
 	float DelayLength = .5;
@@ -47,20 +60,30 @@ int main()
 
 	cout<<endl; 
 	cout<<"PLAYERS STATS:"<<endl;
-	cout<<"HP: "<<playerHP <<endl;
-	cout<<"Atk: "<<playerAtk<<endl;
+	cout<<"HP: "<<player.hp <<endl;
+	cout<<"Atk: "<<player.atk<<endl;
 	cout<<"Def: "<<playerDef<<endl;
-	cout<<"Agi: "<<playerAgi<<endl;
+	cout<<"Agi: "<<player.Agi<<endl;
 	
 
 
 
 	cout<<endl; 
 	cout<<"ENEMYS STATS:"<<endl;
-	cout<<"HP: "<<enemyHP <<endl;
-	cout<<"Atk: "<<enemyAtk<<endl;
+	cout<<"HP: "<<enemy.hp <<endl;
+	cout<<"Atk: "<<enemy.atk<<endl;
 	cout<<"Def: "<<enemyDef<<endl;
 	cout<<"Agi: "<<enemyAgi<<endl;
+
+
+	int choc;
+	cout<<"            Menu             "<<endl;
+	cout<<                               <<endl;
+	cout<<"  1)     Knight's Pack       "<<endl; 
+	cout<<"  2)     Tank's Pack         "<<endl; 
+	cout<<"  3)     Roguet's Pack       "<<endl; 
+	cin>>choc;
+	
 
 
 
