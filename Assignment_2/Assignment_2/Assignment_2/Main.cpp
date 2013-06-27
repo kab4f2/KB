@@ -131,18 +131,9 @@ int main()
 		cout<<"#########################################"<<endl;
 		cout<<"-----------------------------------------"<<endl;
 		cout<<"ROUND" <<CombatRounds<<endl;
-		//cout<<"PLAYER:"<<endl;
-		//cout<<"HP"<<player.hp<<endl;
-		//cout<<"ATK"<<player.atk<<endl;
-		//cout<<"DEF"<<player.def<<endl;
-		//cout<<"AGI"<<player.agi<<endl;
-	
-		//cout<<"ENEMY:"<<endl;
+		
 		DisplayStats( player,enemy);
-		//cout<<"HP"<<enemy.hp<<endl;
-		//cout<<"ATK"<<enemy.atk<<endl;
-		//cout<<"DEF"<<enemy.def<<endl;
-		//cout<<"AGI"<<enemy.agi<<endl;
+		
 		Sleep(1000);
 
 
@@ -235,28 +226,6 @@ else if (enemy.hp <= 0)
 {
 	cout<<"CONGRATULATIONS, YU WON!"<<endl;
 }
-	
-
-
-
-
-
-
-
-
-
-
-
-	
-	
-	
-	
-
-
-
-
-
-
 	system("PAUSE");
 	return 0;
 }
