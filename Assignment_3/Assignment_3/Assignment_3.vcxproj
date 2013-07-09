@@ -62,8 +62,8 @@
   <ItemGroup>
     <ClCompile Include="Employee.cpp" />
     <ClCompile Include="EmployeeHandler.cpp" />
+    <ClCompile Include="Main.cpp" />
     <ClCompile Include="Schedule.cpp" />
-    <ClCompile Include="\\kc.umkc.edu\kc-users\home\k\kab4f2\My Documents\Visual Studio 2010\Projects\Assignment_3\Assignment_3\Main.cpp" />
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="Employee.h" />

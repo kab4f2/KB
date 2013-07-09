@@ -1,0 +1,25 @@
+﻿Build started 7/9/2013 4:16:11 PM.
+     1>Project "Q:\CS201\Projects\Assignment_3\Assignment_3\Assignment_3.vcxproj" on node 2 (build target(s)).
+     1>PrepareForBuild:
+         Creating directory "Q:\CS201\Projects\Assignment_3\Release\".
+       InitializeBuildStatus:
+         Creating "Release\Assignment_3.unsuccessfulbuild" because "AlwaysCreate" was specified.
+       ClCompile:
+         c:\Program Files\Microsoft Visual Studio 10.0\VC\bin\CL.exe /c /Zi /nologo /W3 /WX- /O2 /Oi /Oy- /GL /D _MBCS /Gm- /EHsc /MD /GS /Gy /fp:precise /Zc:wchar_t /Zc:forScope /Fo"Release\\" /Fd"Release\vc100.pdb" /Gd /TP /analyze- /errorReport:prompt Employee.cpp EmployeeHandler.cpp Main.cpp Schedule.cpp
+         Employee.cpp
+         EmployeeHandler.cpp
+         Main.cpp
+     1>Main.cpp(161): warning C4101: 'PayRate' : unreferenced local variable
+         Schedule.cpp
+       Link:
+         c:\Program Files\Microsoft Visual Studio 10.0\VC\bin\link.exe /ERRORREPORT:PROMPT /OUT:"Q:\CS201\Projects\Assignment_3\Release\Assignment_3.exe" /NOLOGO kernel32.lib user32.lib gdi32.lib winspool.lib comdlg32.lib advapi32.lib shell32.lib ole32.lib oleaut32.lib uuid.lib odbc32.lib odbccp32.lib /MANIFEST /ManifestFile:"Release\Assignment_3.exe.intermediate.manifest" /MANIFESTUAC:"level='asInvoker' uiAccess='false'" /DEBUG /PDB:"Q:\CS201\Projects\Assignment_3\Release\Assignment_3.pdb" /OPT:REF /OPT:ICF /LTCG /TLBID:1 /DYNAMICBASE /NXCOMPAT /IMPLIB:"Q:\CS201\Projects\Assignment_3\Release\Assignment_3.lib" /MACHINE:X86 Release\Employee.obj
+         Release\EmployeeHandler.obj
+         Release\Main.obj
+         Release\Schedule.obj
+     1>Schedule.obj : error LNK2005: "void __cdecl Output(void)" (?Output@@YAXXZ) already defined in Employee.obj
+     1>Q:\CS201\Projects\Assignment_3\Release\Assignment_3.exe : fatal error LNK1169: one or more multiply defined symbols found
+     1>Done Building Project "Q:\CS201\Projects\Assignment_3\Assignment_3\Assignment_3.vcxproj" (build target(s)) -- FAILED.
+
+Build FAILED.
+
+Time Elapsed 00:00:03.29

@@ -1,5 +1,7 @@
 #include <string>
 #include"Employee.h"
+#ifndef _EMPLOYEEHANDLER
+#define _EMPLOYEEHANDLER
 
 
 
@@ -25,3 +27,4 @@ private:
 	Employee& GetEmployee(int index);
 	int GetEmployeeCount();
 };
+#endif

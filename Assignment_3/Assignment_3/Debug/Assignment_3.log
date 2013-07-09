@@ -1,27 +1,26 @@
-﻿Build started 7/8/2013 10:16:21 PM.
+﻿Build started 7/9/2013 4:12:49 PM.
      1>Project "Q:\CS201\Projects\Assignment_3\Assignment_3\Assignment_3.vcxproj" on node 2 (build target(s)).
      1>InitializeBuildStatus:
          Touching "Debug\Assignment_3.unsuccessfulbuild".
        ClCompile:
-         c:\Program Files (x86)\Microsoft Visual Studio 10.0\VC\bin\CL.exe /c /ZI /nologo /W3 /WX- /Od /Oy- /D _MBCS /Gm /EHsc /RTC1 /MDd /GS /fp:precise /Zc:wchar_t /Zc:forScope /Fo"Debug\\" /Fd"Debug\vc100.pdb" /Gd /TP /analyze- /errorReport:prompt Employee.cpp EmployeeHandler.cpp Schedule.cpp
-         Schedule.cpp
-     1>q:\cs201\projects\assignment_3\assignment_3\schedule.h(11): error C2236: unexpected 'class' 'Schedule'. Did you forget a ';'?
-     1>q:\cs201\projects\assignment_3\assignment_3\schedule.h(11): error C2143: syntax error : missing ';' before '{'
-     1>q:\cs201\projects\assignment_3\assignment_3\schedule.h(11): error C2447: '{' : missing function header (old-style formal list?)
-         EmployeeHandler.cpp
-     1>q:\cs201\projects\assignment_3\assignment_3\schedule.h(11): error C2236: unexpected 'class' 'Schedule'. Did you forget a ';'?
-     1>q:\cs201\projects\assignment_3\assignment_3\schedule.h(11): error C2143: syntax error : missing ';' before '{'
-     1>q:\cs201\projects\assignment_3\assignment_3\schedule.h(11): error C2447: '{' : missing function header (old-style formal list?)
-     1>q:\cs201\projects\assignment_3\assignment_3\employee.h(9): error C2011: 'Employee' : 'class' type redefinition
-                 q:\cs201\projects\assignment_3\assignment_3\employee.h(9) : see declaration of 'Employee'
-     1>q:\cs201\projects\assignment_3\assignment_3\schedulehandler.h(15): error C2146: syntax error : missing ';' before identifier 'm_lstSchedule'
-     1>q:\cs201\projects\assignment_3\assignment_3\schedulehandler.h(15): error C4430: missing type specifier - int assumed. Note: C++ does not support default-int
-     1>q:\cs201\projects\assignment_3\assignment_3\schedulehandler.h(15): error C4430: missing type specifier - int assumed. Note: C++ does not support default-int
+         c:\Program Files\Microsoft Visual Studio 10.0\VC\bin\CL.exe /c /ZI /nologo /W3 /WX- /Od /Oy- /D _MBCS /Gm /EHsc /RTC1 /MDd /GS /fp:precise /Zc:wchar_t /Zc:forScope /Fo"Debug\\" /Fd"Debug\vc100.pdb" /Gd /TP /analyze- /errorReport:prompt Employee.cpp EmployeeHandler.cpp Main.cpp Schedule.cpp
          Employee.cpp
-     1>q:\cs201\projects\assignment_3\assignment_3\employee.cpp(5): error C2628: 'Employee' followed by 'void' is illegal (did you forget a ';'?)
          Generating Code...
+         Compiling...
+         Schedule.cpp
+         Main.cpp
+     1>q:\cs201\projects\assignment_3\assignment_3\main.cpp(161): warning C4101: 'PayRate' : unreferenced local variable
+         EmployeeHandler.cpp
+         Generating Code...
+       Link:
+         c:\Program Files\Microsoft Visual Studio 10.0\VC\bin\link.exe /ERRORREPORT:PROMPT /OUT:"Q:\CS201\Projects\Assignment_3\Debug\Assignment_3.exe" /NOLOGO kernel32.lib user32.lib gdi32.lib winspool.lib comdlg32.lib advapi32.lib shell32.lib ole32.lib oleaut32.lib uuid.lib odbc32.lib odbccp32.lib /MANIFEST /ManifestFile:"Debug\Assignment_3.exe.intermediate.manifest" /MANIFESTUAC:"level='asInvoker' uiAccess='false'" /DEBUG /PDB:"Q:\CS201\Projects\Assignment_3\Debug\Assignment_3.pdb" /TLBID:1 /DYNAMICBASE /NXCOMPAT /IMPLIB:"Q:\CS201\Projects\Assignment_3\Debug\Assignment_3.lib" /MACHINE:X86 Debug\Employee.obj
+         Debug\EmployeeHandler.obj
+         Debug\Main.obj
+         Debug\Schedule.obj
+     1>Schedule.obj : error LNK2005: "void __cdecl Output(void)" (?Output@@YAXXZ) already defined in Employee.obj
+     1>Q:\CS201\Projects\Assignment_3\Debug\Assignment_3.exe : fatal error LNK1169: one or more multiply defined symbols found
      1>Done Building Project "Q:\CS201\Projects\Assignment_3\Assignment_3\Assignment_3.vcxproj" (build target(s)) -- FAILED.
 
 Build FAILED.
 
-Time Elapsed 00:00:07.32
+Time Elapsed 00:00:03.01

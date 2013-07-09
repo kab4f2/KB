@@ -24,7 +24,7 @@
     <ClCompile Include="Schedule.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
-    <ClCompile Include="\\kc.umkc.edu\kc-users\home\k\kab4f2\My Documents\Visual Studio 2010\Projects\Assignment_3\Assignment_3\Main.cpp">
+    <ClCompile Include="Main.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
   </ItemGroup>

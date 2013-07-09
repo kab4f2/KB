@@ -1,4 +1,6 @@
 #include <string>
+#ifndef _EMPLOYEE
+#define _EMPLOYEE
 
 
                                                                   
@@ -18,5 +20,6 @@ private:
 	bool GetIsActive();
 	void LayOff();
 	void Output();
-}
 
+};
+#endif

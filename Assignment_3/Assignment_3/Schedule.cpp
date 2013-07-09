@@ -13,10 +13,10 @@ void AssignEmployee(Employee *employee)
 
 
 };
-string GetEmployeeName()
+string Schedule::GetEmployeeName()
 {
 
-
+	return " ";
 
 };
 void Output()
@@ -29,5 +29,5 @@ void Reset()
 };
 bool GetIsSet()
 {
-
+	return true;
 };
