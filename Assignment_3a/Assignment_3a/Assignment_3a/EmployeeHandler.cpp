@@ -1,4 +1,5 @@
 #include "ScheduleHandler.h"
+#include "EmployeeHandler.h"
 #include <iostream>
 
 using namespace std;
@@ -9,7 +10,12 @@ using namespace std;
 int EmployeeHandler::EmployeeSelection()
 {
 		
-	return 0;	
+	DisplayEmployeeList();
+	int answer;
+	cout<< "Input the Index:"<<endl;
+	cin>>answer;
+	return answer;
+
 		
 };
 //Employee& EmployeeHandler:: GetEmployee(int index)
@@ -22,7 +28,7 @@ int EmployeeHandler::EmployeeSelection()
 int EmployeeHandler::GetEmployeeCount()
 {
 
-	return 0;
+	return employeeCount;
 
 };
 EmployeeHandler::EmployeeHandler()
@@ -54,10 +60,46 @@ void EmployeeHandler::AddEmployee()
 	employeeCount ++;
 		
 }
-//void EmployeeHandler::EditEmployee();
-//void EmployeeHandler::LayoffEmployee();
-//void EmployeeHandler::DisplayEmployeeList();
+void EmployeeHandler::EditEmployee()
+{
+	DisplayEmployeeList();
+	int EmployeeSelection();
+	int num;
+	string firstName;
+	string lastName;
+	int PayRate;
+	m_lstEmployees[num];
+	cout<<"First Name...?"<<endl;
+	cin>>firstName;
+	//cin>>Employee.m_firstname;
+	cout<<"Last Name...?"<<endl;
+	cin>>lastName;
+	cout<<"PayRate...?"<<endl;
+	cin>>PayRate;
+	
+	
+}
+void EmployeeHandler::LayoffEmployee()
+{
+	DisplayEmployeeList();
+	int index;
+	cout<<"what the index of the employee"<<endl;
+	cin>>index;
+	
+
+
+};
+void EmployeeHandler::DisplayEmployeeList()
+{	
+	m_lstEmployees[50];
+	
+	int u = 0;	
+	for ( int i = 0; i < employeeCount; i++ )
+	{		
+		m_lstEmployees[i].Output();
+
+	}
+}
 
 //Employee& EmployeeHandler::GetEmployee(int index);
-////int GetEmployeeCount();
-//};
+
