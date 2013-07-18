@@ -1,0 +1,17 @@
+﻿Build started 7/18/2013 5:33:10 PM.
+     1>Project "Q:\CS201\Projects\Assignment_4\Assignment_4\Assignment_4.vcxproj" on node 2 (build target(s)).
+     1>InitializeBuildStatus:
+         Creating "Debug\Assignment_4.unsuccessfulbuild" because "AlwaysCreate" was specified.
+       ClCompile:
+         All outputs are up-to-date.
+       Link:
+         All outputs are up-to-date.
+         Assignment_4.vcxproj -> Q:\CS201\Projects\Assignment_4\Debug\Assignment_4.exe
+       FinalizeBuildStatus:
+         Deleting file "Debug\Assignment_4.unsuccessfulbuild".
+         Touching "Debug\Assignment_4.lastbuildstate".
+     1>Done Building Project "Q:\CS201\Projects\Assignment_4\Assignment_4\Assignment_4.vcxproj" (build target(s)).
+
+Build succeeded.
+
+Time Elapsed 00:00:00.11
