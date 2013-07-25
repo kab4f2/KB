@@ -30,7 +30,7 @@ private:
 
 
 template <typename T>
-List<T>::List()                        ////constructor
+List<T>::List()                                     ////constructor
 {	
 	m_size = 0;
 	m_allocatedSize = 10;
@@ -43,7 +43,7 @@ List<T>::List()                        ////constructor
 template <typename T>
 List<T>::~List()
 {	
-	delete [] m_list;                                   /////Destructor
+	delete [] m_list;                                 /////Destructor
 }
 
 
@@ -115,7 +115,7 @@ void List<T>::Resize( )
 	m_allocatedSize += 10;
 	m_list = new T[ m_allocatedSize ];
 	
-	// Copy data back to m_list	
+	                                     // Copy data back to m_list	
 	for ( int i = 0; i < oldSize; i++ )	
 	{	
 		m_list[i] = tempList[i];	

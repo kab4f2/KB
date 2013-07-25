@@ -1,6 +1,5 @@
 #include <string>
 #include <iostream>
-
 #include <fstream>
 #include "PhoneBook.h"
 #include "PhoneNumber.h"
@@ -40,7 +39,7 @@ int main()
 		{
 			cout<<"All PHONE NUMBERS"<<endl;
 			cout<<"------------------"<<endl;
-			phonebook.OutPutAllPhoneNumber();// Function goes here on our phonebook instance"<<endl;
+			phonebook.OutPutAllPhoneNumber();
 		}
 
 
@@ -48,13 +47,13 @@ int main()
 
 		if (choice == FILTER_BY_COUNTRY)
 		{
-			phonebook.OutPutAllCountries();//Function goes here "<<endl;
+			phonebook.OutPutAllCountries();
 			cout<<"Whats the name of the Country...?"<<endl;
 			string choice;
 			cin>>choice;
 			cout<<"People who live in the Country :"<<choice<<endl;
 			cout<<"--------------------------------"<<endl;
-			phonebook.OutPutPhoneNumberFilter(choice);////// function of the phonebook class goes here"<<endl;
+			phonebook.OutPutPhoneNumberFilter(choice);
 		}
 
 
@@ -68,6 +67,7 @@ int main()
 			char answ;
 			cin>>answ;
 			cout<<"People whose last name starts with:"<<answ<<endl;
+			cout<<"-----------------------------------"<<endl;
 			phonebook.OutPutPhoneNumberFilter(answ);
 		}
 
@@ -75,46 +75,13 @@ int main()
 
 		if (choice == QUIT)
 		{
-			cout<<"CYA"<<endl;
+			cout<<"BYE HAVE A BLESSED DAY"<<endl;
 			done = true;
 		}
 	}
 
 
-//int pauser;
-//PhoneBook phonebook;
-//phonebook.ReadFile("numbers.txt");
 
-//phonebook.OutPutAllCountries();
-//cin>>pauser;
-
-//phonebook.OutPutAllPhoneNumber();
-//cin>>pauser;
-
-//phonebook.OutPutPhoneNumberFilter("France");
-//cin>>pauser;
-
-//phonebook.OutPutPhoneNumberFilter('T');
-//cin>>pauser;
-
-
-///List<PhoneNumber> list("list");
-// PhoneNumber tempNumber("first1","last!","123-456-7890","US");
-// list.AddItem(tempNumber);
-//list.AddItem(tempNumber);
-//tempNumber.Setup("first1","last!","123-456-7890","US");
-//list.AddItem(tempNumber);
-
-//list.AddItem("Kansas City");
-//list.AddItem("Olathe");
-////list.AddItem("Raytown");
-//list.AddItem("Olathe");
-///list.AddItem("Indeppendence");
-//list.AddItem("Qak Grove");
-//list.AddItem("Lee Summit");
-
-//list.OutputAll();
-//cout << "List size is:"<<list.GetSize()<<endl;
 
 system("pause");
 return 0;

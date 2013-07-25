@@ -1,0 +1,17 @@
+﻿Build started 7/24/2013 8:54:14 AM.
+     1>Project "Q:\CS201\Projects\Assignment_5\Assignment_5\Assignment_5.vcxproj" on node 2 (build target(s)).
+     1>InitializeBuildStatus:
+         Creating "Debug\Assignment_5.unsuccessfulbuild" because "AlwaysCreate" was specified.
+       ClCompile:
+         c:\Program Files (x86)\Microsoft Visual Studio 10.0\VC\bin\CL.exe /c /ZI /nologo /W3 /WX- /Od /Oy- /D _MBCS /Gm /EHsc /RTC1 /MDd /GS /fp:precise /Zc:wchar_t /Zc:forScope /Fo"Debug\\" /Fd"Debug\vc100.pdb" /Gd /TP /analyze- /errorReport:prompt Main.cpp
+         Main.cpp
+     1>q:\cs201\projects\assignment_5\assignment_5\map.h(65): error C2065: 'ingredient' : undeclared identifier
+     1>q:\cs201\projects\assignment_5\assignment_5\map.h(65): error C2227: left of '->second' must point to class/struct/union/generic type
+                 type is ''unknown-type''
+     1>q:\cs201\projects\assignment_5\assignment_5\map.h(65): error C2228: left of '.begin' must have class/struct/union
+     1>q:\cs201\projects\assignment_5\assignment_5\map.h(67): error C2065: 'ingredient' : undeclared identifier
+     1>Done Building Project "Q:\CS201\Projects\Assignment_5\Assignment_5\Assignment_5.vcxproj" (build target(s)) -- FAILED.
+
+Build FAILED.
+
+Time Elapsed 00:00:01.92

@@ -33,7 +33,7 @@ void PhoneBook::ReadFile(const string& fileName)
 {
 	string first, last,phone,country;
 	ifstream infile;
-	infile.open(fileName.c_str());                             //How is the file opened......?????????
+	infile.open(fileName.c_str());                            //Opening file 
 	while(infile>>first>> last>> phone>>country)
 	{
 		PhoneNumber tempPhone(first,last,phone,country);
@@ -41,7 +41,7 @@ void PhoneBook::ReadFile(const string& fileName)
 		m_listCountries.AddItem(country);
 	}
 	cout<<m_listPhoneNumbers.GetSize();
-	///close();                                            //Find out how to close the file????????
+	//close();                                            //Find out how to close the file????????
 	
 };
 
@@ -80,7 +80,7 @@ void PhoneBook::OutPutPhoneNumberFilter(const string& country)
 void PhoneBook::OutPutPhoneNumberFilter(char letter)
 {
 	
-	cout <<"joe"<<endl;
+	
 	for (int i = 0;i<m_listPhoneNumbers.GetSize();i++)
 	{
 		PhoneNumber item = m_listPhoneNumbers.GetItem(i);

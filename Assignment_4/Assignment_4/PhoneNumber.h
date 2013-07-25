@@ -12,7 +12,7 @@ using namespace std;
 class PhoneNumber
 {
 public:
-	PhoneNumber(){}                  ///Default Constructor                                
+	PhoneNumber(){}                                                                                   ///Default Constructor                                
 	PhoneNumber(const string& first,const string& last,const string& phone,const string& country);
 	void Setup(const string& first,const string& last,const string& phone,const string& country);
 	friend bool operator==(const PhoneNumber& item1,const PhoneNumber& item2); 
@@ -36,6 +36,8 @@ void PhoneNumber::Setup(const string&  first,const string& last,const string&  p
 	m_phoneNumber = phone;
 	m_country = country;
 };
+
+
 bool  operator==(const PhoneNumber& item1,const PhoneNumber& item2)
 {
 	
@@ -61,6 +63,8 @@ ostream & operator<<(ostream& out,PhoneNumber& item)
 	return out;
 
 }
+
+
 PhoneNumber::PhoneNumber(const string& first,const string& last,const string& phone,const string& country)
 {
 	m_firstName = first;
@@ -68,4 +72,5 @@ PhoneNumber::PhoneNumber(const string& first,const string& last,const string& ph
 	m_phoneNumber = phone;
 	m_country = country;
 };
+
 #endif;
