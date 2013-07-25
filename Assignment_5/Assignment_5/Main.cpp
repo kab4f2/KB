@@ -27,21 +27,22 @@ int main()
 		
 		if (choice == 0)
 		{ 
-			cout<<"BYE"<<endl;
+			cout<<"Quitting.....Bye"<<endl;
 			done = true;
 		 }
 
 
-		 if (choice == 1)
+		 else if (choice == 1)
 		 {
-			void AddRecipe();
+			 cout<<"Adding Recipes"<<endl;
+			 AddRecipe(recipes);
 		 }
 
 
-		if (choice == 2)
+		else if (choice == 2)
 
 		{
-			void ExportRecipes();
+			ExportRecipes(recipes);
 			
 		}
 			

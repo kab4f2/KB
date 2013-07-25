@@ -27,6 +27,7 @@ void DisplayMenu()
 
 void AddRecipe( map< string, vector<string> >& recipes )
 {
+	cout<<" "<<endl;
 	cout<<"Whats the Name of the Recipes"<<endl;
 			 string name;
 			 cin>>name;
@@ -35,11 +36,14 @@ void AddRecipe( map< string, vector<string> >& recipes )
 			 {
 				 cout<<"What are the ingredients and the amounts?"<<endl;
 				 string ingredient,amount;
-				 cin>>ingredient;
-				 cin>> amount;
 				 getline(cin,ingredient,'\n');
-				 if (cin == "done")
+				 if (ingredient == "done")
 				 {
+					 finished = true;
+				 }
+				 else if(ingredient == " ")
+				 {
+					 
 					 finished = true;
 				 }
 				 else
@@ -55,17 +59,22 @@ void AddRecipe( map< string, vector<string> >& recipes )
 
 void ExportRecipes( map< string, vector<string> >& recipes )
 {
-	cout<<"Exporting Recipes"<<endl;
+	
+	
 	ofstream outfile;
 	outfile.open("Recipes.txt");
 	for (map< string, vector<string> >::iterator recipe = recipes.begin();recipe != recipes.end();recipe++)
 	{
 		outfile<< endl<< recipe->first <<endl;
+	
+		for (vector< string >::iterator ingredient = recipe->second.begin();
+			ingredient != recipe ->second.end();
+			ingredient++)
+			
+		{
+			outfile<< "\t"<< *ingredient <<endl;
+		};
 	}
-	for (map< string, vector<string> >::iterator recipe = ingredient->second.begin();recipe != recipes.end();recipe++)
-	{
-		outfile<< "\t"<< *ingredient <<endl;
-	};
 	outfile.close();
 	
 };
